@@ -1,10 +1,11 @@
 { config ? { }, overlays ? [ ] }:
 
 let
+  sources = import ./sources.nix {};
   defaultOverlays = [
     (import ./haskell-overlay.nix)
     (import ./python-overlay.nix)
   ];
   overlaysAll = defaultOverlays ++ overlays;
 in
-import ./nixpkgs.nix { config = { allowUnsupportedSystem = true; }; overlays = overlaysAll; }
+import sources.nixpkgs { config = { allowUnsupportedSystem = true; }; overlays = overlaysAll; }
