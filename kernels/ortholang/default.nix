@@ -31,13 +31,13 @@ let
   ortholangKernel = stdenv.mkDerivation rec {
     name = "ortholang-kernel-${kernel.version}"; # TODO use name here?
     inherit (kernel) version;
-    logo = ./ortholang-64x64.png; # TODO what's up with this part?
+    src = ./ortholang-64x64.png; # TODO what's up with this part?
     # buildInputs = [];
     # TODO use name here?
     phases = "installPhase";
     installPhase = ''
       mkdir -p $out/kernels/ortholang_${kernel.version}
-      cp ${logo} $out/kernels/ortholang_${kernel.version}/ortholang-64x64.png
+      cp $src $out/kernels/ortholang_${kernel.version}/logo-64x64.png
       echo '${builtins.toJSON kernelFile}' > $out/kernels/ortholang_${kernel.version}/kernel.json
     '';
   };
