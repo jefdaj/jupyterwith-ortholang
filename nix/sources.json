@@ -22,5 +22,29 @@
         "type": "tarball",
         "url": "https://github.com/nixos/nixpkgs/archive/9555e0baacc2315dcde1a58bd359e4ff48beaf2f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "ortholang": {
+        "branch": "master",
+        "description": "Short, reproducible phylogenomic cuts",
+        "homepage": null,
+        "owner": "jefdaj",
+        "repo": "ortholang",
+        "rev": "61e511b",
+        "sha256": "1r0pwzpds7wbl4b1cblh98f680kc5rwcjfnsp232zqpd9yg48l9s",
+        "type": "tarball",
+        "url": "https://github.com/jefdaj/ortholang/archive/61e511b.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "ortholang-jupyter-kernel": {
+        "branch": "feature-arion-jupyterwith",
+        "description": "A Jupyter kernel for OrthoLang.",
+        "homepage": null,
+        "owner": "jefdaj",
+        "repo": "ortholang-jupyter-kernel",
+        "rev": "01a48af3c7b0b2dec6cb4be1d15087a15cae62f7",
+        "sha256": "06m65gjbcik5b89v5n1h0rf0ga9rpgvfg1qvikbzmz0mhba48knx",
+        "type": "tarball",
+        "url": "https://github.com/jefdaj/ortholang-jupyter-kernel/archive/01a48af3c7b0b2dec6cb4be1d15087a15cae62f7.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

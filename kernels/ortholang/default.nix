@@ -10,12 +10,10 @@ let
               then pinnedOrtholang.version
               else builtins.replaceStrings [" "] ["-"] name;
 
-  # pinned ortholang kernel v0.9.5
-  # TODO build kernel with current nixpkgs instead of matching ortholang?
-  # TODO get all this from niv of course
-  pinnedOrtholang = import           /home/jefdaj/myrepos/ortholang-jupyter-kernel/ortholang;
-  pinnedNixpkgs   = import           /home/jefdaj/myrepos/ortholang-jupyter-kernel/ortholang/nixpkgs;
-  kernel = pinnedNixpkgs.callPackage /home/jefdaj/myrepos/ortholang-jupyter-kernel rec {
+  sources         = import ../../nix/sources.nix {};
+  pinnedNixpkgs   = import sources.nixpkgs {};
+  pinnedOrtholang = import sources.ortholang; # TODO try a post-gitmodules version
+  kernel = pinnedNixpkgs.callPackage sources.ortholang-jupyter-kernel rec {
     ortholang      = pinnedOrtholang;
     inherit pkgs;                     # note: not the old pinned version
     pythonPackages = python3Packages; # note: not the old pinned version
