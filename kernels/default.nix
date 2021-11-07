@@ -14,4 +14,5 @@
   gophernotes = callPackage ./gophernotes;
   rustWith = callPackage ./rust;
   ocamlWith = callPackage ./ocaml;
+  ortholangKernel = callPackage ./ortholang;
 }
