@@ -1,5 +1,5 @@
 { stdenv
-, name ? "nixpkgs"
+, name ? null
 , pkgs
 , python3Packages
 }:
@@ -23,22 +23,22 @@ let
       "{connection_file}"
     ];
     codemirror_mode = "yaml"; # TODO what's this?
-    display_name = "OrthoLang - " + name; # TODO use version here?
+    display_name = "OrthoLang " + (if name == null then pinnedOrtholang.version else name);
     language = "ortholang";
-    logo64 = "ortholang-64x64.png";
+    logo64 = "ortholang-64x64.png"; # TODO where is this used?
   };
 
   ortholangKernel = stdenv.mkDerivation rec {
-    name = "ortholang-kernel-${kernel.version}"; # TODO use name here?
+    name = "ortholang-kernel-${pinnedOrtholang.version}";
     inherit (kernel) version;
     src = ./ortholang-64x64.png; # TODO what's up with this part?
     # buildInputs = [];
     # TODO use name here?
     phases = "installPhase";
     installPhase = ''
-      mkdir -p $out/kernels/ortholang_${kernel.version}
-      cp $src $out/kernels/ortholang_${kernel.version}/logo-64x64.png
-      echo '${builtins.toJSON kernelFile}' > $out/kernels/ortholang_${kernel.version}/kernel.json
+      mkdir -p $out/kernels/ortholang_${pinnedOrtholang.version}
+      cp $src $out/kernels/ortholang_${pinnedOrtholang.version}/logo-64x64.png
+      echo '${builtins.toJSON kernelFile}' > $out/kernels/ortholang_${pinnedOrtholang.version}/kernel.json
     '';
   };
 
