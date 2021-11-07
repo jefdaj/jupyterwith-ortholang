@@ -1,6 +1,7 @@
 # Example of a Jupyter server with OrthoLang 0.9.5,
 # as well as Python + R with custom packages
-# Usage: nix-shell --command 'jupyter lab'
+# Usage: nix-build example.nix && ./result/bin/jupyter-lab
+# Usage: nix-shell example.nix --command 'jupyter lab'
 
 let
   jupyter = import ./default.nix {};
@@ -23,4 +24,4 @@ let
     kernels = [ python r ortholang ];
   };
 in
-  jupyterEnvironment.env
+  jupyterEnvironment
