@@ -15,10 +15,9 @@ let
     packages = p: with p; [ p.tidyverse ];
   };
 
-  # you can add a name, but there aren't packages like in python or R
-  ortholang = jupyter.kernels.ortholangKernel {
-    name = "pinned 0.9.5";
-  };
+  # ortholang is a monolithic program with no user-installable packages so far
+  # you can optionally add a name here though
+  ortholang = jupyter.kernels.ortholangKernel {};
 
   jupyterEnvironment = jupyter.jupyterlabWith {
     kernels = [ python r ortholang ];

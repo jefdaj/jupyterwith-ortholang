@@ -24,15 +24,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "ortholang": {
-        "branch": "master",
+        "branch": "develop",
         "description": "Short, reproducible phylogenomic cuts",
         "homepage": null,
         "owner": "jefdaj",
         "repo": "ortholang",
-        "rev": "61e511b",
-        "sha256": "1r0pwzpds7wbl4b1cblh98f680kc5rwcjfnsp232zqpd9yg48l9s",
+        "rev": "63087d51031da6b95f6814a51b5e8af249d505fc",
+        "sha256": "140d9z58bd4dwq80m6244k55ia1ra08r97ccp46dpx953s68g3fp",
         "type": "tarball",
-        "url": "https://github.com/jefdaj/ortholang/archive/61e511b.tar.gz",
+        "url": "https://github.com/jefdaj/ortholang/archive/63087d51031da6b95f6814a51b5e8af249d505fc.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "ortholang-jupyter-kernel": {
@@ -41,10 +41,10 @@
         "homepage": null,
         "owner": "jefdaj",
         "repo": "ortholang-jupyter-kernel",
-        "rev": "01a48af3c7b0b2dec6cb4be1d15087a15cae62f7",
-        "sha256": "06m65gjbcik5b89v5n1h0rf0ga9rpgvfg1qvikbzmz0mhba48knx",
+        "rev": "9394b5816901efa7fbbb530b3be5cbb5a39536a2",
+        "sha256": "0fqzi66m2ab4502wm9442fl2k3db7cr0dm2ln2drssj3ld5g8y7d",
         "type": "tarball",
-        "url": "https://github.com/jefdaj/ortholang-jupyter-kernel/archive/01a48af3c7b0b2dec6cb4be1d15087a15cae62f7.tar.gz",
+        "url": "https://github.com/jefdaj/ortholang-jupyter-kernel/archive/9394b5816901efa7fbbb530b3be5cbb5a39536a2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
