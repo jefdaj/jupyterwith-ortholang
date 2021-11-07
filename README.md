@@ -1,5 +1,6 @@
-jupyterWith OrthoLang
-=====================
+# jupyterWith OrthoLang
+
+<img align="right" src="./kernels/ortholang/ortholang-64x64.png"></img>
 
 My fork of [jupyterWith][upstream] adds support for the
 [OrthoLang Jupyter kernel][kernel].
